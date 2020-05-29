@@ -1,0 +1,14 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: X-Timeline # 注册到eureka server的服务名
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://47.94.102.95:3306/x_timeline?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=GMT%2b8
+    username: root
+    password: AAaa@721005
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:123456@127.0.0.1:8761/eureka/ # eureka server的地址

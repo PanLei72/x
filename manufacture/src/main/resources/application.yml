@@ -1,0 +1,9 @@
+server:
+  port: 8082
+spring:
+    application:
+        name: X-Manufacture # 注册到eureka server的服务名
+eureka:
+    client:
+        serviceUrl:
+          defaultZone: http://admin:123456@127.0.0.1:8761/eureka/ # eureka server的地址

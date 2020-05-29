@@ -1,0 +1,33 @@
+server:
+  port: 80
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://47.94.102.95:3306/x_framework?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=GMT%2b8
+    username: root
+    password: AAaa@721005
+  application:
+    name: X-Framework # 注册到eureka server的服务名
+
+jpa:
+  properties:
+    hibernate:
+      hbm2ddl:
+        auto: update
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        format_sql: true
+  show-sql: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  server:
+    port: 8088
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:123456@127.0.0.1:8761/eureka/ # eureka server的地址
